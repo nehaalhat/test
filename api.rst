@@ -21,7 +21,7 @@ steps:
 
     python wsgi.py
 
-create data [POST]
+Create data [POST]
 ------------------
 
 The data in json format passed by user is validated first and if its valid json
