@@ -24,7 +24,7 @@ steps:
 Create data [POST]
 ------------------
 
-The data in json format passed by user is validated first and if its valid json
+The json file passed by user is validated first. If the json file is valid
 then MLData, resource and nodes data is added in DB.
 
 
