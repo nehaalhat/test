@@ -13,13 +13,23 @@ steps:
 
     python migrate.py db init
     python migrate.py db migrate
+    python migrate.py db upgrade
 
 2. Run the application by running wsgi.py
-
+This will run application on port 8000.
 
 .. code-block:: python
 
+    cd medhavi
     python wsgi.py
+
+3. To run the data file on simple http server run below command in medhavi repo.
+The path of this file is given as 'DataURL' in data.json
+
+.. code-block:: python
+    cd medhavi
+    python -m SimpleHTTPServer 8005
+
 
 Create data [POST]
 ------------------
@@ -123,3 +133,23 @@ Delete a particular Node by providing its uuid.
 .. code-block:: python
 
     http://localhost:9000/node/<uuid>
+
+List Node Resources [GET]
+-------------------------
+
+List all node resources.
+
+
+.. code-block:: python
+
+    http://localhost:9000/node/resources
+
+Show Node Resource Details [GET]
+--------------------------------
+
+Show a particular node resource details by providing its uuid.
+
+
+.. code-block:: python
+
+    http://localhost:9000/node/resources/id
